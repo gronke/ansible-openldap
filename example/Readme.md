@@ -26,3 +26,10 @@ ansible-playbook -i Inventory --vault-password-file=config-vault-password.txt pl
 ```
 
 Please make sure you never store a password in an Ansible Playbook :)
+
+Seeding Data
+------------
+
+After executing the the role the example Playbook will seed some sample data and configure access control. The LDIF files used for that are stored in `./seed`.
+
+It is important to skip existing entries when adding the seed data to keep the playbook idempotent
