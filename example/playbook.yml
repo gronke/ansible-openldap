@@ -9,7 +9,7 @@
     - include_vars: config-vault.yml
       no_log: true
   roles:
-    - role: gronke.ldap
+    - role: gronke.openldap
       slapd_root_password: "{{ vault_ldap_root_password }}"
       slapd_domain: "{{ domain }}"
   tasks:
