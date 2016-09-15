@@ -15,9 +15,11 @@ Examples
 --------
 
 ### Slapd with MDB backend without TLS
+```yaml
 - role: gronke.ldap
     slapd_root_password: "correct horse battery staple"
     slapd_domain: "example.com"
+```
 
 ToDo
 ----
