@@ -1,0 +1,13 @@
+---
+- name: OpenLDAP example playbook
+  hosts:
+    - ldap
+  vars:
+    domain: 'example.com'
+  pre_tasks:
+    - include_vars: config-vault.yml
+      no_log: true
+  roles:
+    - role: gronke.ldap
+      slapd_root_password: '{{ vault_ldap_root_password }}'
+      slapd_domain: '{{ domain }}'

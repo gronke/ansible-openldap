@@ -1,0 +1,17 @@
+# disable anonymous bind
+dn: cn=config
+changetype: modify
+replace: olcDisallows
+olcDisallows: bind_anon
+
+# disable anon frontend
+dn: olcDatabase={-1}frontend,cn=config
+changetype: modify
+replace: olcRequires
+olcRequires: authc
+
+# disable anon backend
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+replace: olcRequires
+olcRequires: authc

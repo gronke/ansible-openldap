@@ -1,0 +1,20 @@
+---
+
+- set_fact:
+    _helper_scripts:
+      - disallow-anon-bind.ldif
+      - grant-local-root.ldif
+
+- name: ldif helper are updated
+  copy:
+    src: "{{ item }}"
+    dest: "{{ slapd_ldif_helper_dir }}/{{ item }}"
+    owner: root
+    group: root
+    mode: 0770
+  with_items: "{{ _helper_scripts }}"
+
+- name: anononmous access is denied
+  shell: ldapmodify -Y EXTERNAL -H ldapi:/// -f "{{ slapd_ldif_helper_dir }}/{{ item }}"
+  with_items: "{{ _helper_scripts }}"
+
