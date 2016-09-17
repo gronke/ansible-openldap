@@ -1,7 +1,7 @@
 Ansible Role: OpenLDAP Server (slapd)
 =====================================
 
-Provisions [OpenLDAP](https://www.openldap.org/) server (slapd) on Debian 8
+Provisions [OpenLDAP](https://www.openldap.org/) server (slapd) on Debian/Ubuntu
 
 Role Variables
 --------------

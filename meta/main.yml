@@ -1,0 +1,20 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Stefan Grönke
+  description: Provisions [OpenLDAP](https://www.openldap.org/) server (slapd) on Debian
+  company: gronke.org
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+    - name: Ubuntu
+      versions:
+        - trusty
+  galaxy_tags:
+    - ldap
+
