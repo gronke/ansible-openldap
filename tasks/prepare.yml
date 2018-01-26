@@ -12,5 +12,5 @@
     path: "{{ slapd_ldif_helper_dir }}"
     state: directory
     owner: root
-    group: root
+    group: "{{ _os_root_group }}"
     mode: 0770

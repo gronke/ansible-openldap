@@ -10,7 +10,7 @@
     src: "{{ item }}"
     dest: "{{ slapd_ldif_helper_dir }}/{{ item }}"
     owner: root
-    group: root
+    group: "{{ _os_root_group }}"
     mode: 0770
   with_items: "{{ _helper_scripts }}"
 
